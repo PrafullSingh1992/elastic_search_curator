@@ -22,6 +22,9 @@ actions:
       continue_if_exception: False
       disable_action: False
       ignore_empty_list: True
+      remote_aws_key: ${AWS_KEY:''}
+      remote_aws_secret_key: ${AWS_SECRET:''}
+      remote_aws_region: ${AWS_REGION:''}
     filters:
     - filtertype: pattern
       kind: prefix
