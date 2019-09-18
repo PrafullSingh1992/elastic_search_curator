@@ -5,9 +5,9 @@ This is dockerized version of elasticsearch curator,tool to manage time-based in
 
 the docker image for [curator][] baseon the [python:3.6-alpine][](this image size only 30mb)
 
-docker hub  https://hub.docker.com/r/prafull392/docker-curator/ 
+docker hub  https://hub.docker.com/r/prafull392/elastic_search_curator/ 
 
-[![Automated build](https://img.shields.io/docker/automated/prafull392/docker-curator.svg)](https://hub.docker.com/r/prafull392/docker-curator/) [![Docker Pulls](https://img.shields.io/docker/pulls/prafull392/docker-curator.svg)](https://hub.docker.com/v2/repositories/prafull392/docker-curator/)
+[![Automated build](https://img.shields.io/docker/automated/prafull392/elastic_search_curator.svg)](https://hub.docker.com/r/prafull392/elastic_search_curator/) [![Docker Pulls](https://img.shields.io/docker/pulls/prafull392/docker-curator.svg)](https://hub.docker.com/v2/repositories/prafull392/elastic_search_curator/)
 # Usage
 
 ## docker-compose.yml
@@ -29,7 +29,7 @@ services:
     #    - /data/path/to/host/:/usr/share/elasticsearch/data
 
   curator:
-    image: prafull392/docker-curator
+    image: prafull392/elastic_search_curator
     environment:
         UNIT_COUNT: 10
         UNIT: days
