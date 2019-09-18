@@ -7,7 +7,7 @@ the docker image for [curator][] baseon the [python:3.6-alpine][](this image siz
 
 docker hub  https://hub.docker.com/r/prafull392/prafull/ 
 
-[![Automated build](https://img.shields.io/docker/automated/prafull392/prafull.svg)](https://hub.docker.com/r/prafull392/prafull/) [![Docker Pulls](https://img.shields.io/docker/pulls/prafull392/docker-curator.svg)](https://hub.docker.com/v2/repositories/prafull392/prafull/)
+[![Automated build](https://img.shields.io/docker/automated/prafull392/prafull.svg)](https://hub.docker.com/r/prafull392/prafull/) [![Docker Pulls](https://img.shields.io/docker/pulls/prafull392/prafull.svg)](https://hub.docker.com/v2/repositories/prafull392/prafull/)
 # Usage
 
 ## docker-compose.yml
