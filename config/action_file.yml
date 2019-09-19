@@ -22,9 +22,9 @@ actions:
       continue_if_exception: False
       disable_action: False
       ignore_empty_list: True
-      remote_aws_key: AKIA3FHUVLJSU75J5DJ7
-      remote_aws_secret_key: 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
-      remote_aws_region: ap-south-1
+      remote_aws_key: ${AWS_KEY:}
+      remote_aws_secret_key: ${AWS_SECRET:''}
+      remote_aws_region: ${AWS_REGION:''}
     filters:
     - filtertype: pattern
       kind: prefix
