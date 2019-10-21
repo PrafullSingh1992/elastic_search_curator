@@ -9,4 +9,4 @@ RUN pip install elasticsearch-curator==${CURATOR_VERSION}
 COPY config/* /home/ubuntu/elkstack/mn-1/curator/
 COPY run-curator /home/ubuntu/elkstack/mn-1/
 
-ENTRYPOINT ["/home/ubuntu/elkstack/mn-1/run-curator"]
+CMD ["/home/ubuntu/elkstack/mn-1/run-curator","-f"]
