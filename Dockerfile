@@ -6,7 +6,6 @@ ARG CURATOR_VERSION=5.8.1
 
 RUN pip install elasticsearch-curator==${CURATOR_VERSION}
 
-COPY config/* /home/ubuntu/elkstack/mn-1/curator/
-COPY run-curator /home/ubuntu/elkstack/mn-1/
+RUN /usr/bin/run-curator /config/run-curator.txt
 
-CMD ["/home/ubuntu/elkstack/mn-1/run-curator","-f"]
+CMD ["/usr/sbin/crond","-f"]
