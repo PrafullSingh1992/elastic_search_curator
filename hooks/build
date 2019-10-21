@@ -1,2 +1,0 @@
-#!/bin/bash
-docker build -t $IMAGE_NAME . --build-arg CURATOR_VERSION=$CURATOR_VERSION

@@ -1,1 +1,0 @@
-*/10 * * * * curator --dry-run /config/action_file.yml --config /config/config_file.yml 
