@@ -2,15 +2,17 @@ actions:
   1:
     action: delete_indices
     description: >-
-      Delete indices older than $DELETE_AGE days (default is 45)
+      Delete indices older than $DELETE_AGE days (default is 3)
       for logstash and metricbeat prefixed indices.
     options:
       ignore_empty_list: True
+      timeout_override:
+      continue_if_exception: False
       disable_action: False
     filters:
     - filtertype: pattern
-      kind: regex
-      value: "decimal-e18h8c8mv8~time_slot_tester-lkdf86rl1n~audit~esb"
+      kind: prefix
+      value: decimal-e18h8c8mv8~time_slot_tester-
     - filtertype: age
       source: name
       direction: older
