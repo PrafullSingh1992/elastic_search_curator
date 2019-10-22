@@ -13,7 +13,10 @@ actions:
     - filtertype: pattern
       kind: prefix
       value: decimal-
+    - filtertype: age
+      source: name
+      direction: older
+      timestring: '%Y.%m.%d'
       unit: days
       unit_count: 3
-      direction: older
       
