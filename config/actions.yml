@@ -10,10 +10,10 @@ actions:
     filters:
     - filtertype: pattern
       kind: regex
-      value: "^(logstash-|metricbeat-).*$"
+      value: "decimal-e18h8c8mv8~time_slot_tester-lkdf86rl1n~audit~esb"
     - filtertype: age
       source: name
       direction: older
       timestring: '%Y.%m.%d'
       unit: days
-      unit_count: ${DELETE_AGE:3}
+      unit_count: 3
