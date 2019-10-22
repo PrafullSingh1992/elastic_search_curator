@@ -12,7 +12,8 @@ actions:
     filters:
     - filtertype: pattern
       kind: prefix
-      value: "decimal-e18h8c8mv8~time_slot_tester-*"
+      value: logstash-
+      exclude:
     - filtertype: age
       source: name
       direction: older
