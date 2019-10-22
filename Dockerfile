@@ -1,10 +1,10 @@
-RUN echo "remote_aws_key ${remote_aws_key}"
-RUN echo "remote_aws_key ${remote_aws_secret_key}"
-
 FROM amazon/opendistro-for-elasticsearch:1.2.0
 
 ENV AWS_ACCESS_KEY_ID ${remote_aws_key}
 ENV AWS_SECRET_ACCESS_KEY {remote_aws_secret_key}
+
+RUN echo "remote_aws_key ${remote_aws_key}"
+RUN echo "remote_aws_key ${remote_aws_secret_key}"
 
 
 
