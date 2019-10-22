@@ -1,5 +1,5 @@
-echo "remote_aws_key ${remote_aws_key}"
-echo "remote_aws_key ${remote_aws_secret_key}"
+RUN echo "remote_aws_key ${remote_aws_key}"
+RUN echo "remote_aws_key ${remote_aws_secret_key}"
 
 FROM amazon/opendistro-for-elasticsearch:1.2.0
 
