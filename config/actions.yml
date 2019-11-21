@@ -3,7 +3,7 @@ actions:
     action: snapshot
     description: the snapshot.
     options:
-      repository: my_repository
+      repository: my_backup
       # Leaving name blank will result in the default 'curator-%Y%m%d%H%M%S'
       name: my_repository
       ignore_unavailable: False
