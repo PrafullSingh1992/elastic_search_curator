@@ -15,9 +15,9 @@ actions:
       continue_if_exception: False
       disable_action: False
       ignore_empty_list: True
-      remote_aws_key: ${AWS_KEY}
-      remote_aws_secret_key: ${AWS_SECRET}
-      remote_aws_region: ${AWS_REGION}
+#      remote_aws_key: ${AWS_KEY}
+#      remote_aws_secret_key: ${AWS_SECRET}
+#      remote_aws_region: ${AWS_REGION}
     filters:
     - filtertype: pattern
       kind: prefix
@@ -30,25 +30,25 @@ actions:
       unit_count: ${DELETE_AGE}
       exclude:
       
-#  2:
-#    action: delete_indices
-#    description: >-
-#      Delete indices older than $DELETE_AGE days (default is 3)
-#      for logstash and metricbeat prefixed indices.
-#    options:
-#      ignore_empty_list: True
-#      timeout_override:
-#      continue_if_exception: False
-#      disable_action: False
-#      exclude:
-#    filters:
-#    - filtertype: pattern
-#      kind: prefix
-#      value: decimal-
-#    - filtertype: age
-#      source: creation_date
-#      direction: older
-#      unit: days
-#      unit_count: ${DELETE_AGE}
-#      exclude:
+  2:
+    action: delete_indices
+    description: >-
+      Delete indices older than $DELETE_AGE days (default is 3)
+      for logstash and metricbeat prefixed indices.
+    options:
+      ignore_empty_list: True
+      timeout_override:
+      continue_if_exception: False
+      disable_action: False
+      exclude:
+    filters:
+    - filtertype: pattern
+      kind: prefix
+      value: decimal-
+    - filtertype: age
+      source: creation_date
+      direction: older
+      unit: days
+      unit_count: ${DELETE_AGE}
+      exclude:
       
