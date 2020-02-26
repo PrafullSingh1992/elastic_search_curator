@@ -1,12 +1,12 @@
-FROM alpine
-
-RUN apk -U add python py2-pip
+FROM python:3.6-alpine
 
 ARG CURATOR_VERSION=5.8.1
-RUN pip install wheel
-RUN pip install elasticsearch-curator==${CURATOR_VERSION}
 
-COPY config/* /etc/curator/
-COPY run-curator /usr/bin/
+RUN pip install  elasticsearch-curator==${CURATOR_VERSION} &&\
+    rm -rf /var/cache/apk/*
 
-ENTRYPOINT ["/usr/bin/run-curator"]
+COPY ./config/ /config
+
+RUN /usr/bin/crontab /config/crontab.txt
+
+CMD ["/usr/sbin/crond","-f"]
