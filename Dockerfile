@@ -5,8 +5,6 @@ ARG CURATOR_VERSION=5.8.1
 RUN pip install  elasticsearch-curator==${CURATOR_VERSION} &&\
     rm -rf /var/cache/apk/*
 
-COPY ./config/ /config
-
 COPY config/* /etc/curator/
 COPY run-curator /usr/bin/
 
