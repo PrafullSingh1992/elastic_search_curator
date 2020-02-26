@@ -7,6 +7,7 @@ RUN pip install  elasticsearch-curator==${CURATOR_VERSION} &&\
 
 COPY ./config/ /config
 
-RUN /usr/bin/crontab /config/crontab.txt
+COPY config/* /etc/curator/
+COPY run-curator /usr/bin/
 
-CMD ["/usr/sbin/crond","-f"]
+ENTRYPOINT ["/usr/bin/run-curator"]
