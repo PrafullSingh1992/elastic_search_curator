@@ -21,7 +21,7 @@ actions:
     filters:
     - filtertype: pattern
       kind: prefix
-      value: decimal-
+      value: *
       exclude:
     - filtertype: age
       source: creation_date
@@ -44,7 +44,7 @@ actions:
     filters:
     - filtertype: pattern
       kind: prefix
-      value: decimal-
+      value: *
     - filtertype: age
       source: creation_date
       direction: older
