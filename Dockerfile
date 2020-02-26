@@ -4,7 +4,7 @@ RUN apk -U add python py2-pip
 
 ARG CURATOR_VERSION=5.8.1
 
-RUN pip install elasticsearch-curator==${CURATOR_VERSION}
+RUN pip install elasticsearch-curator
 
 COPY config/* /etc/curator/
 COPY run-curator /usr/bin/
